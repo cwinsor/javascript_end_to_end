@@ -1,8 +1,13 @@
 from  https://mherman.org/blog/postgresql-and-nodejs/
 
-This is an example frontend/backend javascript web app with postgres on the backend.  It uses express web server/routing and (a little) angular on the front-end.
+This is an example frontend/backend javascript web app with postgres on the server.
+It uses express web server/routing and (a little) angular on the front-end.
 Anyway it s a good example.
-INTERESTING - the example is almost entirely straight out of the node "express-generator". More specifically - THERE IS NO GITHUB!  There is hardly any code added by the author, and what code is added just copy from the website.   I have included my work as "MINE" as an example - you should follow the instructions and MAKE-YOUR-OWN :)
+INTERESTING - the example is almost entirely straight out of the
+node "express-generator". More specifically - THERE IS NO GITHUB!  There
+is limited code added by the author, and what code is added just copy from
+the website.   I have included my work as "MINE" as an example - you should
+follow the instructions and MAKE-YOUR-OWN :)
 
 npm install -g express-generator@4.13.4
 express node-postgres-todo
@@ -11,18 +16,21 @@ npm install
 
 if you don't have "npm" then you need to install node.  Continuing on...
 
-node bin/www         (note for clarity "www" is a regular javascript file - nothing special - would be better named www.js)
+node bin/www
 and visit  http://localhost:3000/
 
-ok..... the code...
-there is client-side and server-side code...
+===============================
+files...  there is client-side and server-side...
+
+bin/www         (note for clarity "www" is a regular javascript file - nothing
+special - would be better named www.js)
 
 --- client-side ---
 client-side... unfortunately it is muddled with "jade"
 views/*.jade
 
 --- server-side ---
-app.js     this sets up a bunch of global shit including "app" which is express
+app.js     this sets up a bunch of global shit including "app" which is express web server
 
 www        aaaaaaaaargh  -- this is JAVASCRIPT and should be named www.js
       creates express server
@@ -41,9 +49,11 @@ models/database.js      this does  const pg = require('pg');     i.e. it created
 add the models/database.js as instructed
 
 ==========================================
-confirm that postgres is up and running.  If not you need to install postgres and play with pgadmin.
+confirm that postgres is up and running.  If not you need to install postgres and
+play with pgadmin.
 
-For USERNAME/PASSWORD:  "pg" will look for environment variables for these.  In windows do the following:
+For USERNAME/PASSWORD:  "pg" will look for environment variables for these.  In windows
+do the following:
 
 $env:PGUSER='postgres'
 $env:PGHOST='localhost'
