@@ -42,8 +42,9 @@ angular.module('nodeTodo', [])
         // Update a todo
         $scope.updateTodo = (todoID) => {
             console.log('updating id...\n');
-            $http.put('/api/v1/todos/' + todoID)
+            $http.put('/api/v1/todos/' + todoID, ($scope).formData)
                 .success((data) => {
+                    $scope.formData = {};
                     $scope.todoData = data;
                     console.log(data);
                 })
